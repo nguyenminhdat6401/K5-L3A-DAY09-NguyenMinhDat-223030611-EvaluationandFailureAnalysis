@@ -2,7 +2,7 @@
 
 Kiểm tra tự động từ item, nhãn gốc Lab 8 và report fixed đã sinh bằng harness.
 Nhãn v1 trùng hoàn toàn expected trong nguồn public; không có nhãn inline trong item.
-Report kiểm chứng: `E-fixed-20261117-645d`, spec `1.1`.
+Report kiểm chứng: `E-fixed-20261117-4940`, spec `1.1`.
 
 | Item | Claim | Kiểm chứng nhãn | Replay fixed | Review trace thủ công |
 |---|---|---|---|---|

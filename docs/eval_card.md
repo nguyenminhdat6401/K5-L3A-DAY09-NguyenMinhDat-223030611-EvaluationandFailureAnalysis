@@ -2,10 +2,10 @@
 
 ## Phiên bản và khả năng tái lập
 
-- Baseline run ID: E-swarm-20261117-645d.
-- Fixed run ID: E-fixed-20261117-645d.
-- Regression run ID: E-seeded_regression-20261117-645d.
-- Eval set SHA: 645d5b6365d4.
+- Baseline run ID: E-swarm-20261117-4940.
+- Fixed run ID: E-fixed-20261117-4940.
+- Regression run ID: E-seeded_regression-20261117-4940.
+- Eval set SHA: 494060a05b2c.
 - Eval set: v1, 14 item × 5 seed 11,22,33,44,55.
 - Nguồn item: lab8_public.
 - Nhãn tách riêng: src/data/eval/labels_v1.json.
@@ -171,9 +171,9 @@ Grader mới đối chiếu full proposal với nhãn, không phụ thuộc tên
 
 - Spec v1 hiện tại: 1.1; spec v2: 2.1. Thêm metric chẩn đoán
   proposal_amount_correct, không hạ ngưỡng hoặc đổi metric blocking cũ.
-- Eval set v2: 28 item × 5 seed; SHA 38466844c956.
-- Baseline: E-swarm-20261117-3846, src/reports/baseline_v2.json.
-- Slice regression: E-slice_regression-20261117-3846,
+- Eval set v2: 28 item × 5 seed; SHA 92017ce37c84.
+- Baseline: E-swarm-20261117-9201, src/reports/baseline_v2.json.
+- Slice regression: E-slice_regression-20261117-9201,
   src/reports/eval_slice_regression.json.
 - Baseline pass_rate=0.9786; pass_hat_5=0.8929;
   pass_at_5=1.0000; cost/success=50.8077 VND mô phỏng.
@@ -217,3 +217,13 @@ bằng chứng đã tái hiện một variant cross-principal bị lỗi.
 Nguyễn Minh Đạt dùng ChatGPT/Codex để đọc đề, gợi ý và sửa code,
 viết test, phân tích output và soạn tài liệu. Kết quả được kiểm chứng
 bằng các lệnh test/eval/gate đã nêu; không tự tạo số liệu hoặc commit giả.
+
+
+## Reproducibility correction: LF newlines
+
+The Windows generator previously wrote CRLF while Git/Ubuntu checked out LF,
+so raw-byte eval-set hashes differed although the records were identical.
+The generator now writes explicit LF and .gitattributes pins JSONL to LF.
+The raw-byte SHA algorithm, labels, metric floors and Lab 8 are unchanged.
+All five submission reports were regenerated through lab9.eval; references
+above use the regenerated LF hashes. This does not change measured scores.

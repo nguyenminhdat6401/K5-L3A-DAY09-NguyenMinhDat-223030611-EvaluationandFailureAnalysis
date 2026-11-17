@@ -26,8 +26,8 @@ Bổ sung metric, eval set, phân tích lỗi và gate trước merge.
 ## 3. Định nghĩa chạy đúng
 
 Spec: src/config/metric_spec.yaml.
-Baseline: E-swarm-20261117-645d.
-Eval set SHA: 645d5b6365d4.
+Baseline: E-swarm-20261117-4940.
+Eval set SHA: 494060a05b2c.
 
 | Metric | Loại | Ngưỡng | Chặn release? | Baseline |
 |---|---|---|---|---:|
@@ -80,8 +80,8 @@ Các lệnh chạy trong src:
 - CI GitHub phải được kiểm tra sau khi mở PR.
 
 Bằng chứng chạy cục bộ:
-- Fixed E-fixed-20261117-645d: exit 0.
-- Seeded regression E-seeded_regression-20261117-645d:
+- Fixed E-fixed-20261117-4940: exit 0.
+- Seeded regression E-seeded_regression-20261117-4940:
   exit 1 do refund_amount_correct, pass_rate,
   reply_amount_correct.
 - Pass rate regression giảm 0.271,
@@ -118,8 +118,8 @@ Bằng chứng chạy cục bộ:
 
 Spec v1 1.1 và spec v2 2.1 thêm proposal_amount_correct làm metric
 chẩn đoán không blocking (min 0.95). Baseline/report đã được sinh lại.
-Eval set v2 có 28 item × 5 seed, SHA 38466844c956;
-baseline E-swarm-20261117-3846 có pass_rate 0.9786 và pass_hat_5 0.8929.
+Eval set v2 có 28 item × 5 seed, SHA 92017ce37c84;
+baseline E-swarm-20261117-9201 có pass_rate 0.9786 và pass_hat_5 0.8929.
 
 Điều kiện blocking v2 bổ sung: pass_hat_5 >= 0.80; slices
 money_movement >= 0.90, adversarial >= 0.85, denial >= 0.90,
