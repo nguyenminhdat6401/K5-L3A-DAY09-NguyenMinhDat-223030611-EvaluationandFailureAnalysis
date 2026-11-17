@@ -1,0 +1,2 @@
+# Keep generated evaluation-set bytes identical on Windows and Linux.
+src/data/eval/*.jsonl text eol=lf
